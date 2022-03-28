@@ -44,3 +44,13 @@ function isVaild(user) {
     };
     return result;
 }
+// Pick<T,K>
+var admin6 = {
+    id: "6",
+    name: "Tim"
+};
+// Omit<T,K>
+var admin7 = {
+    id: "7",
+    name: "Tim"
+};
