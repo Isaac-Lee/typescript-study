@@ -26,3 +26,56 @@ class User {
     this.name = name;
   }
 }
+
+// Literal Types
+const userName1 = "Bob";
+let userName2: string = "Tom";
+
+type job = "police" | "developer" | "teacher";
+
+interface MyUser {
+  name: string;
+  job: job;
+}
+
+const user1: MyUser = {
+  name: "Bob",
+  job: "developer"
+};
+
+// UnionTypes
+
+interface MyCar {
+  name: "car";
+  color: string;
+  start(): void;
+}
+
+interface MyMobile {
+  name: "mobile";
+  color: string;
+  call(): void;
+}
+
+function getGift(gift: MyCar | MyMobile) {
+  console.log(gift.color);
+  if (gift.name === "car") {
+    gift.start();
+  } else {
+    gift.call();
+  }
+}
+
+// Intersection Types
+
+interface MyToy {
+  color: string;
+  price: number;
+}
+
+const myToyCar: MyToy & MyCar = {
+  name: "car",
+  start(){},
+  color: "blue",
+  price: 1000
+}
