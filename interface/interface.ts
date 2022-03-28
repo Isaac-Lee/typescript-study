@@ -50,6 +50,7 @@ interface Merc extends Car {
 }
 
 class BMW implements Car {
+  name;
   color;
   wheels = 4;
 

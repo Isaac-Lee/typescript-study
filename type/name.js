@@ -15,3 +15,25 @@ var User = /** @class */ (function () {
     }
     return User;
 }());
+// Literal Types
+var userName1 = "Bob";
+var userName2 = "Tom";
+var user1 = {
+    name: "Bob",
+    job: "developer"
+};
+function getGift(gift) {
+    console.log(gift.color);
+    if (gift.name === "car") {
+        gift.start();
+    }
+    else {
+        gift.call();
+    }
+}
+var myToyCar = {
+    name: "car",
+    start: function () { },
+    color: "blue",
+    price: 1000
+};
